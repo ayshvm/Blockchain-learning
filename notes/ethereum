@@ -4,18 +4,24 @@ Ethereum's node architecture consists of several key components that work togeth
 
 Execution Layer: 
 1. Execution Node (EL): This node runs the execution client software (e.g., Geth, Besu, Nethermind) responsible for processing transactions, executing smart contracts, and managing the Ethereum state. Examples of execution clients include Geth, Besu, and Nethermind. 
+# chart https://github.com/NethermindEth/charts/tree/main/charts
 
 Consensus Layer
 1. Beacon Node: The beacon node runs the consensus client software (e.g., Prysm, Teku, Lighthouse, Nimbus) and is responsible for coordinating the proof-of-stake consensus mechanism. It handles tasks like block and attestation processing, running the fork choice algorithm, and managing validator rewards and penalties. 
+# chart https://github.com/NethermindEth/charts/tree/main/charts
+
 
 2. Validator Client: This software allows users to stake 32 ETH and participate as validators in the proof-of-stake consensus process. Validator clients connect to the beacon node and receive instructions on proposing blocks and attesting to the chain's state. 
+# chart https://github.com/NethermindEth/charts/tree/main/charts
 
 Additional Components
 1. Web3 Signer: Web3Signer is a remote signing server that provides a standardized REST API for the beacon node or validator client to sign transactions without storing private keys locally. It enhances security by keeping private keys off the node. 
 
 2. Dirk: Dirk is a distributed remote key management system for Ethereum 2.0 keys. It brings an operational focus to signing operations, providing features like centralized secret management, monitoring, and slashing protection. 
+# https://www.attestant.io/posts/introducing-dirk/
 
 3. Vouch: Vouch is a toolkit for securely setting up and managing Ethereum validators, including key management and node deployment. It aims to simplify the validator setup process. 
+# https://www.attestant.io/posts/introducing-vouch/
 
 
 Node Communication
@@ -25,3 +31,6 @@ Node Communication
 4. Web3Signer and Dirk provide remote signing capabilities for the beacon node and validator client, enhancing security. 
 
 This architecture separates the execution and consensus layers, allowing for parallel processing and future sharding scalability. The different components work together to enable Ethereum's proof-of-stake consensus while processing transactions and managing the blockchain state. 
+
+Sedge:
+https://github.com/NethermindEth/sedge
