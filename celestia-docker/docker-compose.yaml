@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  celestia:
+    build: 
+      context: .
+    ports:
+      - "26660:26660" # Expose celestia-app port
+      - "26657:26657"
+    volumes:
+      - ./data:/root/.celestia-app 
+    networks:
+      - celestia_network
+
+  uptime-kuma:
+    image: louislam/uptime-kuma
+    ports:
+      - "8080:3000" # Expose Uptime Kuma port
+    depends_on:
+      - celestia
+    networks:
+      - celestia_network
+
+networks:
+  celestia_network:
+
