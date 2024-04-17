@@ -13,6 +13,7 @@ services:
       - celestia_network
 
   uptime-kuma:
+    # dummy deployment, will be updated to monitor the node
     image: louislam/uptime-kuma
     ports:
       - "8080:3000" # Expose Uptime Kuma port
