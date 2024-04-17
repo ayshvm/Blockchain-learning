@@ -36,5 +36,5 @@ To run Docker Compose, navigate to the directory containing your `docker-compose
 docker-compose up -d
 
 docker ps -a
-docker logs -f <container_id_or_name>
+docker logs -f celestia_celestia_1 
 ```
